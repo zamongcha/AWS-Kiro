@@ -1,0 +1,647 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 계약서 분석 전용 디렉토리 구조 생성 및 공통 타입 정의": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498246150
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498274262
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788570806924
+      }
+    ],
+    "1.2 모듈별 입출력 인터페이스 정의": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498246327
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788570845137
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571294509
+      }
+    ],
+    "2.1 DynamoDB 계약서 저장소 클라이언트 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498246497
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571300921
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571669611
+      }
+    ],
+    "2.2 OpenSearch 인덱스 클라이언트 및 인덱스 정의 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498247103
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571302318
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571670622
+      }
+    ],
+    "2.3 S3 계약서 오브젝트 저장소 클라이언트 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498247303
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571303582
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571671764
+      }
+    ],
+    "3.1 문서 인식 어댑터(Gemini Vision / Textract / Mock) 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498247545
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571698479
+      },
+      {
+        "executionId": "3b923a25-8a14-4635-9d4f-983a6d13c563",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788573016317
+      }
+    ],
+    "3.2 업로드 검증 및 처리 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498248095
+      },
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571699521
+      },
+      {
+        "executionId": "3b923a25-8a14-4635-9d4f-983a6d13c563",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788573017225
+      }
+    ],
+    "3.3 문서 인식기 및 조항 분할 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498248404
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788662753354
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663181064
+      }
+    ],
+    "4.1 계약 유형 추정 및 당사자 관점 제한 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498248611
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663188407
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663558106
+      }
+    ],
+    "4.2 룰셋 로더 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498249407
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663189656
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663558837
+      }
+    ],
+    "5. 체크포인트 - 업로드·인식·컨텍스트 파이프라인 검증": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498250378
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663572056
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663614419
+      }
+    ],
+    "6.1 위험조항 탐지기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498250573
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663615360
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664089426
+      }
+    ],
+    "7.1 위험도 평가기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498251493
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664090720
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664645680
+      }
+    ],
+    "7.2 등기부 대조기 및 전세사기 스코어링 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498252381
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664091822
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664646877
+      }
+    ],
+    "8.1 수정제안 생성기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498252675
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664648334
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788705665642
+      }
+    ],
+    "8.2 특약 추천기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498252870
+      },
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664649310
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788705667871
+      }
+    ],
+    "9.1 인용 표시기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498253499
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788705666039
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706259533
+      }
+    ],
+    "9.2 판례 연동기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498253708
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788705669485
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706260560
+      }
+    ],
+    "10. 체크포인트 - 탐지·평가·자문·연동 검증": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498253896
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706267949
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706329117
+      }
+    ],
+    "11.1 정보 추출기 및 계산기 연동기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498254668
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706330445
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706711238
+      }
+    ],
+    "11.2 비교 분석기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498254852
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706331511
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706712588
+      }
+    ],
+    "12.1 버전 관리기 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498255055
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706713955
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788747710902
+      }
+    ],
+    "12.2 시뮬레이션 엔진 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498255764
+      },
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706714938
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788747712530
+      }
+    ],
+    "13.1 첨부서류 체크리스트 서비스 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498255989
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788747713675
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788748108334
+      }
+    ],
+    "14.1 계약 유형별 룰셋·표준계약서·필수특약·체크리스트 시드 데이터 구축": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498256582
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788747715345
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788748109877
+      }
+    ],
+    "14.2 관리(admin) 데이터 적재 파이프라인 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498256836
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788748111133
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788749851467
+      }
+    ],
+    "15.1 계약서 분석 오케스트레이터 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498257018
+      },
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788748112391
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788749853813
+      }
+    ],
+    "15.2 Lambda 핸들러 및 API 라우팅 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498257402
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788749852633
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750292414
+      }
+    ],
+    "16.1 모듈 팩토리 및 통합 구현": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498257864
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750294779
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750720109
+      }
+    ],
+    "17.1 계약서 분석 Lambda·API·저장소 리소스 추가": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498258110
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750295545
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750721403
+      }
+    ],
+    "18. 체크포인트 - 전체 모듈 통합 검증": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498258694
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750722689
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750805177
+      }
+    ],
+    "20. 최종 체크포인트 - 전체 시스템 검증": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788498258901
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750806279
+      },
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750979401
+      }
+    ],
+    "1. 계약서 분석 모듈 기본 구조 및 공통 타입 정의": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571294705
+      }
+    ],
+    "2. 데이터 저장소 접근 계층 구현 (인프라 공유·데이터 격리)": [
+      {
+        "executionId": "854be297-24c7-4a4a-b58f-b0bf82bc36af",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788571672090
+      }
+    ],
+    "4. 계약 유형·당사자 관점 선택 및 룰셋 로딩 구현": [
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788663559015
+      }
+    ],
+    "6. 위험조항 탐지기 구현": [
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664089656
+      }
+    ],
+    "7. 위험도 평가기 및 등기부 대조기 구현": [
+      {
+        "executionId": "ef6e1918-e74e-462e-b49d-11b12066ac38",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788664647047
+      }
+    ],
+    "8. 수정제안 생성기 및 특약 추천기 구현": [
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788705668458
+      }
+    ],
+    "9. 인용 표시기 및 판례 연동기 구현": [
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706260717
+      }
+    ],
+    "11. 정보 추출기·계산기 연동·비교 분석기 구현": [
+      {
+        "executionId": "91fcc486-fe7c-403d-98c4-d4e276a1f17a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788706712800
+      }
+    ],
+    "12. 버전 관리기 및 시뮬레이션 엔진 구현": [
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788747712741
+      }
+    ],
+    "13. 첨부서류 체크리스트 구현": [
+      {
+        "executionId": "a3026bd5-4a4d-4e65-b70d-9172392b1f34",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788748108824
+      }
+    ],
+    "14. 계약 유형별 시드 데이터 및 관리(admin) 구현": [
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788749851714
+      }
+    ],
+    "15. 오케스트레이터 및 Lambda 핸들러 구현": [
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750292571
+      }
+    ],
+    "16. 모듈 통합 팩토리 및 플러그인 레지스트리 등록": [
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750720304
+      }
+    ],
+    "17. 인프라 설정 (CDK 스택 확장)": [
+      {
+        "executionId": "b0e344d9-28bc-4b12-8cb0-dbc8d0d641d7",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788750721662
+      }
+    ]
+  }
+}

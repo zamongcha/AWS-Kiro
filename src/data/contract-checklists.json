@@ -1,0 +1,125 @@
+{
+  "sale": [
+    {
+      "documentName": "등기사항전부증명서(등기부등본)",
+      "purpose": "소유자, 근저당권 등 권리관계와 제한물권 존재 여부를 확인한다",
+      "preparedBy": "buyer"
+    },
+    {
+      "documentName": "건축물대장",
+      "purpose": "면적, 용도, 위반건축물 여부 등 목적물의 공적 현황을 확인한다",
+      "preparedBy": "buyer"
+    },
+    {
+      "documentName": "토지대장 및 지적도",
+      "purpose": "토지 지목, 면적, 경계를 확인하여 목적물 표시와 일치하는지 대조한다",
+      "preparedBy": "buyer"
+    },
+    {
+      "documentName": "신분증 및 등기권리증",
+      "purpose": "매도인이 실제 소유자 본인인지와 처분 권한을 확인한다",
+      "preparedBy": "seller"
+    },
+    {
+      "documentName": "인감증명서 및 위임장",
+      "purpose": "대리 계약 시 대리권과 의사표시의 진정성을 확인한다",
+      "preparedBy": "seller"
+    },
+    {
+      "documentName": "국세·지방세 완납증명서",
+      "purpose": "목적물에 대한 조세 체납으로 인한 압류 위험이 없는지 확인한다",
+      "preparedBy": "seller"
+    }
+  ],
+  "jeonse": [
+    {
+      "documentName": "등기사항전부증명서(등기부등본)",
+      "purpose": "선순위 근저당권과 소유자를 확인하여 보증금 회수 안전성을 판단한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "건축물대장",
+      "purpose": "위반건축물 여부와 실제 용도를 확인하여 대항력 확보에 문제가 없는지 점검한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "임대인 신분증 및 등기권리증",
+      "purpose": "계약 상대방이 실제 소유자 본인인지 확인한다",
+      "preparedBy": "landlord"
+    },
+    {
+      "documentName": "국세·지방세 완납증명서",
+      "purpose": "임대인의 세금 체납으로 인한 우선 압류 위험이 없는지 확인한다",
+      "preparedBy": "landlord"
+    },
+    {
+      "documentName": "전세보증금 반환보증 관련 서류",
+      "purpose": "보증보험 가입 요건 충족 여부와 필요한 임대인 협조 서류를 확인한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "대리 계약 시 위임장 및 인감증명서",
+      "purpose": "대리인이 계약할 경우 임대인의 위임 사실과 대리권을 확인한다",
+      "preparedBy": "landlord"
+    }
+  ],
+  "wolse": [
+    {
+      "documentName": "등기사항전부증명서(등기부등본)",
+      "purpose": "소유자와 선순위 채권 현황을 확인하여 보증금 보전 위험을 점검한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "건축물대장",
+      "purpose": "목적물의 용도와 위반건축물 여부를 확인한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "임대인 신분증",
+      "purpose": "계약 상대방이 실제 소유자 본인인지 확인한다",
+      "preparedBy": "landlord"
+    },
+    {
+      "documentName": "관리비 부과 내역서",
+      "purpose": "관리비 항목과 산정 기준을 확인하여 부당 청구 여부를 점검한다",
+      "preparedBy": "landlord"
+    },
+    {
+      "documentName": "대리 계약 시 위임장 및 인감증명서",
+      "purpose": "대리인이 계약할 경우 임대인의 위임 사실과 대리권을 확인한다",
+      "preparedBy": "landlord"
+    }
+  ],
+  "commercial_lease": [
+    {
+      "documentName": "등기사항전부증명서(등기부등본)",
+      "purpose": "소유자와 선순위 담보권 등 권리관계를 확인한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "건축물대장",
+      "purpose": "영업하려는 업종에 적합한 용도인지와 위반건축물 여부를 확인한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "임대인 신분증 및 소유 확인 서류",
+      "purpose": "계약 상대방이 실제 소유자 본인이거나 정당한 처분 권한을 가지는지 확인한다",
+      "preparedBy": "landlord"
+    },
+    {
+      "documentName": "영업 인허가 관련 서류",
+      "purpose": "해당 장소에서 임차인의 업종 영업이 가능한지와 필요한 인허가 취득 가능성을 확인한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "전 임차인 권리금 및 시설 현황 자료",
+      "purpose": "권리금 산정과 원상복구 범위 확인을 위해 기존 시설 현황을 파악한다",
+      "preparedBy": "tenant"
+    },
+    {
+      "documentName": "대리 계약 시 위임장 및 인감증명서",
+      "purpose": "대리인이 계약할 경우 임대인의 위임 사실과 대리권을 확인한다",
+      "preparedBy": "landlord"
+    }
+  ]
+}

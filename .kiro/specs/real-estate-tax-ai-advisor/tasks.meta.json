@@ -1,0 +1,40 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "13.1 로컬 서버에 세율 계산기 연동 추가": [
+      {
+        "executionId": "7470a41b-af74-4ae5-8796-fb965a6b2753",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1787316282951
+      }
+    ],
+    "14.1 모듈 간 연동 및 전체 파이프라인 통합": [
+      {
+        "executionId": "7470a41b-af74-4ae5-8796-fb965a6b2753",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1787316283194
+      }
+    ],
+    "15. 최종 체크포인트 - 전체 시스템 검증": [
+      {
+        "executionId": "7470a41b-af74-4ae5-8796-fb965a6b2753",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1787316283547
+      }
+    ],
+    "13. 로컬 서버 Gemini 연동 업데이트": [
+      {
+        "executionId": "7470a41b-af74-4ae5-8796-fb965a6b2753",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1787316284133
+      }
+    ],
+    "14. 통합 연결 및 전체 파이프라인 연동": [
+      {
+        "executionId": "7470a41b-af74-4ae5-8796-fb965a6b2753",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1787316284500
+      }
+    ]
+  }
+}

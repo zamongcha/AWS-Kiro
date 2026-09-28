@@ -1,0 +1,469 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 계산기 전용 디렉토리 구조 생성 및 공통 타입 정의": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775597096
+      },
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775609182
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788776766509
+      }
+    ],
+    "1.2 모듈별 입출력 인터페이스 정의": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775597235
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788776777191
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788777060509
+      }
+    ],
+    "2.1 기준표 시드 데이터(2024/2025) 구축": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775597438
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788777069767
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778374087
+      }
+    ],
+    "2.2 기준표 관리기 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775597671
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778375470
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778701036
+      }
+    ],
+    "3.1 입력 검증기 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775597800
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778376456
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778704565
+      }
+    ],
+    "4.1 취득비용 계산기 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775597906
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778705495
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788779713260
+      }
+    ],
+    "5. 체크포인트 - 기준표·검증·취득비용 파이프라인 검증": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775598192
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788779714337
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788779792588
+      }
+    ],
+    "6.1 양도세 계산기 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775598335
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788779794043
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788780324729
+      }
+    ],
+    "7.1 중개수수료 계산기 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775598500
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788779794815
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788780326043
+      }
+    ],
+    "9. 체크포인트 - 3개 계산기 및 결정성 검증": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775598649
+      },
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788780327080
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834645603
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834680195
+      }
+    ],
+    "10.1 계산기 연동 어댑터 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775598784
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834646055
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834711214
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836052065
+      }
+    ],
+    "11.1 AI 자문 보조기 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775598906
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834646253
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834712439
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836054826
+      }
+    ],
+    "12.1 계산기 오케스트레이터 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775599038
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834646498
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836061850
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836350994
+      }
+    ],
+    "12.2 Lambda 핸들러 및 API 라우팅 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775599185
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834646732
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836351809
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836561022
+      }
+    ],
+    "13.1 모듈 팩토리 및 통합 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775599315
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834647051
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836562208
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836883694
+      }
+    ],
+    "14.1 계산기 UI 카드 및 입력 폼·결과 표시 구현": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775599620
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834647304
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836885583
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788839015530
+      }
+    ],
+    "14.2 로컬 서버 계산기 라우팅 연결": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775599951
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834647496
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836887671
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788837972787
+      }
+    ],
+    "15.1 계산기 Lambda·API 리소스 추가": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775600056
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834648022
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788839016566
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788840351572
+      }
+    ],
+    "17. 최종 체크포인트 - 전체 시스템 검증": [
+      {
+        "executionId": "298d96ef-413c-4a6e-b469-328b3109c9e0",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788775600165
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834648338
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788840358282
+      },
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788840558745
+      }
+    ],
+    "1. 계산기 모듈 기본 구조 및 공통 타입 정의": [
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788777060645
+      }
+    ],
+    "2. 기준표 관리기 및 시드 데이터 구축": [
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778701287
+      }
+    ],
+    "3. 입력 검증기 구현": [
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788778705134
+      }
+    ],
+    "4. 취득비용 계산기 구현": [
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788779713501
+      }
+    ],
+    "6. 양도소득세 계산기 구현": [
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788780324909
+      }
+    ],
+    "7. 중개수수료 계산기 구현": [
+      {
+        "executionId": "1d1335a2-003d-46a9-9b3f-4775bcb6313d",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788780326176
+      }
+    ],
+    "8. 계산 결정성·근거·면책 고지 검증": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788834670357
+      }
+    ],
+    "10. 계약서 연동 어댑터 구현": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836053977
+      }
+    ],
+    "11. AI 자문 보조 채널 구현 (계산과 격리)": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836055345
+      }
+    ],
+    "12. 오케스트레이터 및 Lambda 핸들러 구현": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836561297
+      }
+    ],
+    "13. 모듈 통합 팩토리 및 서비스 등록": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788836884024
+      }
+    ],
+    "14. 플랫폼 UI 통합 및 로컬 서버 연결": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788839015761
+      }
+    ],
+    "15. 인프라 설정 (CDK 스택 - 독립 경량 스택)": [
+      {
+        "executionId": "c868292b-de7e-4488-84a5-f959c7cc469a",
+        "chatSessionId": "sess_16a543b5-e91c-4f71-9f9a-7c8f72e6ac25",
+        "timestamp": 1788840351725
+      }
+    ]
+  }
+}

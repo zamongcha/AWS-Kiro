@@ -1,0 +1,150 @@
+{
+  "sale": [
+    {
+      "contract_type": "sale",
+      "clause_id": "sale-std-001",
+      "clause_title": "매매대금 및 지급 방법",
+      "clause_content": "매수인은 매매대금을 계약금, 중도금, 잔금으로 나누어 각 지급기일에 매도인에게 지급한다. 계약금은 계약 체결 시, 잔금은 소유권이전등기에 필요한 서류의 교부와 동시에 지급한다.",
+      "clause_order": 1
+    },
+    {
+      "contract_type": "sale",
+      "clause_id": "sale-std-002",
+      "clause_title": "소유권 이전 및 서류 교부",
+      "clause_content": "매도인은 잔금 수령과 동시에 매수인에게 소유권이전등기에 필요한 모든 서류를 교부하고 등기 절차에 협력하며, 목적물을 인도한다.",
+      "clause_order": 2
+    },
+    {
+      "contract_type": "sale",
+      "clause_id": "sale-std-003",
+      "clause_title": "제한물권 등의 소멸",
+      "clause_content": "매도인은 잔금 지급일까지 목적물에 설정된 저당권, 지상권, 임차권 등 매수인에게 인수되지 않는 권리의 하자 및 부담을 제거하여 완전한 소유권을 매수인에게 이전한다.",
+      "clause_order": 3
+    },
+    {
+      "contract_type": "sale",
+      "clause_id": "sale-std-004",
+      "clause_title": "제세공과금의 부담",
+      "clause_content": "목적물에 관한 조세공과금 등은 인도일을 기준으로 그 이전에 발생한 것은 매도인이, 그 이후에 발생한 것은 매수인이 부담한다.",
+      "clause_order": 4
+    },
+    {
+      "contract_type": "sale",
+      "clause_id": "sale-std-005",
+      "clause_title": "계약의 해제 및 채무불이행",
+      "clause_content": "매수인이 중도금 또는 잔금을 지급하지 않으면 매도인은 계약을 해제할 수 있다. 매도인이 위약 시에는 계약금의 배액을 상환하고, 매수인이 위약 시에는 계약금을 위약금으로 하되 각 당사자는 실제 손해를 별도로 청구할 수 있다.",
+      "clause_order": 5
+    }
+  ],
+  "jeonse": [
+    {
+      "contract_type": "jeonse",
+      "clause_id": "jeonse-std-001",
+      "clause_title": "보증금 및 지급 방법",
+      "clause_content": "임차인은 전세보증금을 계약금과 잔금으로 나누어 지급하며, 잔금은 목적물의 인도와 동시에 임대인에게 지급한다.",
+      "clause_order": 1
+    },
+    {
+      "contract_type": "jeonse",
+      "clause_id": "jeonse-std-002",
+      "clause_title": "존속기간 및 목적물 인도",
+      "clause_content": "임대차 존속기간은 인도일부터 기산하며, 임대인은 약정한 인도일에 임차인이 사용·수익할 수 있는 상태로 목적물을 인도한다.",
+      "clause_order": 2
+    },
+    {
+      "contract_type": "jeonse",
+      "clause_id": "jeonse-std-003",
+      "clause_title": "임대인의 담보권 설정 제한",
+      "clause_content": "임대인은 임차인의 전입신고 및 확정일자 익일까지 목적물에 새로운 저당권 등 담보물권을 설정하지 않으며, 임차인의 대항력과 우선변제권을 침해하지 않는다.",
+      "clause_order": 3
+    },
+    {
+      "contract_type": "jeonse",
+      "clause_id": "jeonse-std-004",
+      "clause_title": "보증금의 반환",
+      "clause_content": "임대차가 종료되면 임대인은 목적물을 반환받음과 동시에 임차인에게 전세보증금을 반환한다. 반환은 다음 임차인의 유치 여부와 관계없이 이행한다.",
+      "clause_order": 4
+    },
+    {
+      "contract_type": "jeonse",
+      "clause_id": "jeonse-std-005",
+      "clause_title": "계약갱신 및 차임 등의 증감",
+      "clause_content": "임차인은 관련 법령이 정하는 바에 따라 계약갱신을 요구할 수 있으며, 보증금 등의 증액은 법정 한도 이내에서 정한다.",
+      "clause_order": 5
+    }
+  ],
+  "wolse": [
+    {
+      "contract_type": "wolse",
+      "clause_id": "wolse-std-001",
+      "clause_title": "보증금 및 차임",
+      "clause_content": "임차인은 보증금을 계약 시 지급하고, 매월 약정한 차임을 정해진 지급일에 임대인에게 지급한다.",
+      "clause_order": 1
+    },
+    {
+      "contract_type": "wolse",
+      "clause_id": "wolse-std-002",
+      "clause_title": "존속기간 및 목적물의 사용",
+      "clause_content": "임대차 존속기간을 정하며, 임차인은 계약 목적에 따라 목적물을 사용·수익하고 선량한 관리자의 주의로 이를 보존한다.",
+      "clause_order": 2
+    },
+    {
+      "contract_type": "wolse",
+      "clause_id": "wolse-std-003",
+      "clause_title": "관리비 및 공과금",
+      "clause_content": "관리비의 항목과 산정 기준을 명시하고, 전기·수도·가스 등 사용료는 사용량에 따라 임차인이 부담한다.",
+      "clause_order": 3
+    },
+    {
+      "contract_type": "wolse",
+      "clause_id": "wolse-std-004",
+      "clause_title": "수선 의무",
+      "clause_content": "임대인은 목적물의 사용·수익에 필요한 주요 설비의 수선 의무를 부담하고, 임차인의 고의·과실로 인한 파손은 임차인이 수선하거나 그 비용을 부담한다.",
+      "clause_order": 4
+    },
+    {
+      "contract_type": "wolse",
+      "clause_id": "wolse-std-005",
+      "clause_title": "계약의 해지 및 원상회복",
+      "clause_content": "임차인의 차임 연체액이 2기의 차임액에 달하면 임대인은 계약을 해지할 수 있다. 계약 종료 시 임차인은 통상적인 사용에 따른 손모를 제외하고 목적물을 원상으로 회복하여 반환한다.",
+      "clause_order": 5
+    }
+  ],
+  "commercial_lease": [
+    {
+      "contract_type": "commercial_lease",
+      "clause_id": "commercial-std-001",
+      "clause_title": "보증금 및 차임",
+      "clause_content": "임차인은 보증금을 계약 시 지급하고 매월 약정 차임을 지급기일에 지급하며, 부가가치세 부담 여부를 명시한다.",
+      "clause_order": 1
+    },
+    {
+      "contract_type": "commercial_lease",
+      "clause_id": "commercial-std-002",
+      "clause_title": "존속기간 및 사용 목적",
+      "clause_content": "임대차 존속기간과 임차인의 영업 용도를 명시하고, 임차인은 약정한 용도로 목적물을 사용·수익한다.",
+      "clause_order": 2
+    },
+    {
+      "contract_type": "commercial_lease",
+      "clause_id": "commercial-std-003",
+      "clause_title": "계약갱신요구권",
+      "clause_content": "임차인은 상가건물 임대차보호법이 정하는 범위에서 계약갱신을 요구할 수 있으며, 임대인은 법정 사유가 없는 한 이를 거절하지 못한다.",
+      "clause_order": 3
+    },
+    {
+      "contract_type": "commercial_lease",
+      "clause_id": "commercial-std-004",
+      "clause_title": "권리금 회수 기회의 보호",
+      "clause_content": "임대인은 임대차 종료 시 임차인이 주선한 신규 임차인으로부터 권리금을 회수할 기회를 정당한 사유 없이 방해하지 않는다.",
+      "clause_order": 4
+    },
+    {
+      "contract_type": "commercial_lease",
+      "clause_id": "commercial-std-005",
+      "clause_title": "원상회복 및 계약 종료",
+      "clause_content": "계약이 종료되면 임차인은 인도 당시의 상태를 기준으로 목적물을 원상회복하여 반환하며, 임대인은 보증금에서 미지급 채무를 공제한 잔액을 반환한다.",
+      "clause_order": 5
+    }
+  ]
+}

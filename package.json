@@ -1,0 +1,54 @@
+{
+  "name": "real-estate-legal-ai-advisor",
+  "version": "1.0.0",
+  "description": "부동산 법률 AI 자문 시스템 - RAG 기반 법령/판례 검색 및 응답 생성",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npx ts-node --project src/local-server/tsconfig.json src/local-server/server.ts",
+    "build": "esbuild src/**/*.ts --bundle --platform=node --target=node18 --outdir=dist",
+    "test": "jest",
+    "test:unit": "jest --testPathPattern=src/tests/unit",
+    "test:property": "jest --testPathPattern=src/tests/property",
+    "test:integration": "jest --testPathPattern=src/tests/integration",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "cdk": "cdk",
+    "cdk:synth": "cdk synth",
+    "cdk:deploy": "cdk deploy --all",
+    "cdk:diff": "cdk diff"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "3.654.0",
+    "@aws-sdk/client-dynamodb": "3.654.0",
+    "@aws-sdk/client-opensearch": "3.654.0",
+    "@aws-sdk/client-s3": "3.654.0",
+    "@aws-sdk/client-sns": "3.654.0",
+    "@aws-sdk/client-textract": "^3.654.0",
+    "@aws-sdk/lib-dynamodb": "3.654.0",
+    "@opensearch-project/opensearch": "2.11.0",
+    "aws-cdk-lib": "^2.150.0",
+    "constructs": "^10.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.162",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.16.5",
+    "aws-cdk": "2.150.0",
+    "aws-sdk-client-mock": "4.0.1",
+    "esbuild": "0.23.1",
+    "fast-check": "3.22.0",
+    "jest": "29.7.0",
+    "ts-jest": "29.2.5",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

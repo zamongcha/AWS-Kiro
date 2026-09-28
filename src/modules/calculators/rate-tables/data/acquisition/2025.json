@@ -1,0 +1,104 @@
+{
+  "baseYear": 2025,
+  "version": "2025.4",
+  "metadata": {
+    "description": "취득세 기준표 (참고용 추정치, 2025년 기준). 세율·요율·한도액은 일반 통용값 근사치이며 최신 법령과 다를 수 있음. 공시가격 1억원 이하 다주택 중과 제외 특례 임계값 포함. 비주택 세분화(일반 4%/농지 3%/원시취득 2.8%) 반영. 최소납부세제(지방세특례제한법 제177조의2, 임계값 200만원·초과분 85% 감면) 반영.",
+    "effectiveFrom": "2025-01-01"
+  },
+  "data": {
+    "acquisitionTaxBrackets": [
+      { "propertyType": "house", "housingCount": "one", "isAdjustmentArea": false, "minPrice": 0, "maxPrice": 600000000, "rate": 0.01 },
+      { "propertyType": "house", "housingCount": "one", "isAdjustmentArea": false, "minPrice": 600000000, "maxPrice": 900000000, "rate": 0.02 },
+      { "propertyType": "house", "housingCount": "one", "isAdjustmentArea": false, "minPrice": 900000000, "rate": 0.03 },
+      { "propertyType": "house", "housingCount": "one", "isAdjustmentArea": true, "minPrice": 0, "maxPrice": 600000000, "rate": 0.01 },
+      { "propertyType": "house", "housingCount": "one", "isAdjustmentArea": true, "minPrice": 600000000, "maxPrice": 900000000, "rate": 0.02 },
+      { "propertyType": "house", "housingCount": "one", "isAdjustmentArea": true, "minPrice": 900000000, "rate": 0.03 },
+
+      { "propertyType": "house", "housingCount": "two", "isAdjustmentArea": false, "minPrice": 0, "maxPrice": 600000000, "rate": 0.01 },
+      { "propertyType": "house", "housingCount": "two", "isAdjustmentArea": false, "minPrice": 600000000, "maxPrice": 900000000, "rate": 0.02 },
+      { "propertyType": "house", "housingCount": "two", "isAdjustmentArea": false, "minPrice": 900000000, "rate": 0.03 },
+      { "propertyType": "house", "housingCount": "two", "isAdjustmentArea": true, "minPrice": 0, "rate": 0.08 },
+
+      { "propertyType": "house", "housingCount": "three_or_more", "isAdjustmentArea": false, "minPrice": 0, "rate": 0.08 },
+      { "propertyType": "house", "housingCount": "three_or_more", "isAdjustmentArea": true, "minPrice": 0, "rate": 0.12 },
+
+      { "propertyType": "non_house", "nonHouseType": "general", "housingCount": "one", "isAdjustmentArea": false, "minPrice": 0, "rate": 0.04 },
+      { "propertyType": "non_house", "nonHouseType": "general", "housingCount": "one", "isAdjustmentArea": true, "minPrice": 0, "rate": 0.04 },
+      { "propertyType": "non_house", "nonHouseType": "general", "housingCount": "two", "isAdjustmentArea": false, "minPrice": 0, "rate": 0.04 },
+      { "propertyType": "non_house", "nonHouseType": "general", "housingCount": "two", "isAdjustmentArea": true, "minPrice": 0, "rate": 0.04 },
+      { "propertyType": "non_house", "nonHouseType": "general", "housingCount": "three_or_more", "isAdjustmentArea": false, "minPrice": 0, "rate": 0.04 },
+      { "propertyType": "non_house", "nonHouseType": "general", "housingCount": "three_or_more", "isAdjustmentArea": true, "minPrice": 0, "rate": 0.04 },
+
+      { "propertyType": "non_house", "nonHouseType": "farmland", "housingCount": "one", "isAdjustmentArea": false, "minPrice": 0, "rate": 0.03 },
+      { "propertyType": "non_house", "nonHouseType": "original_acquisition", "housingCount": "one", "isAdjustmentArea": false, "minPrice": 0, "rate": 0.028 }
+    ],
+    "localEducationTaxRate": 0.1,
+    "ruralSpecialTaxRate": 0.002,
+    "ruralSpecialTaxAreaThreshold": 85,
+    "housingBondRates": [
+      { "minOfficialPrice": 0, "maxOfficialPrice": 20000000, "rate": 0.013 },
+      { "minOfficialPrice": 20000000, "maxOfficialPrice": 50000000, "rate": 0.019 },
+      { "minOfficialPrice": 50000000, "maxOfficialPrice": 100000000, "rate": 0.021 },
+      { "minOfficialPrice": 100000000, "maxOfficialPrice": 160000000, "rate": 0.023 },
+      { "minOfficialPrice": 160000000, "maxOfficialPrice": 260000000, "rate": 0.026 },
+      { "minOfficialPrice": 260000000, "rate": 0.031 }
+    ],
+    "judicialScrivenerFeeTable": [
+      { "minPrice": 0, "maxPrice": 100000000, "fee": 160000 },
+      { "minPrice": 100000000, "maxPrice": 300000000, "fee": 260000 },
+      { "minPrice": 300000000, "maxPrice": 500000000, "fee": 360000 },
+      { "minPrice": 500000000, "maxPrice": 1000000000, "fee": 520000 },
+      { "minPrice": 1000000000, "fee": 720000 }
+    ],
+    "stampTaxBrackets": [
+      { "minPrice": 0, "maxPrice": 10000000, "stampTax": 0 },
+      { "minPrice": 10000000, "maxPrice": 30000000, "stampTax": 20000 },
+      { "minPrice": 30000000, "maxPrice": 50000000, "stampTax": 40000 },
+      { "minPrice": 50000000, "maxPrice": 100000000, "stampTax": 70000 },
+      { "minPrice": 100000000, "maxPrice": 1000000000, "stampTax": 150000 },
+      { "minPrice": 1000000000, "maxPrice": 10000000000, "stampTax": 350000 },
+      { "minPrice": 10000000000, "stampTax": 350000 }
+    ],
+    "reductions": [
+      {
+        "reductionType": "first_time_buyer",
+        "reductionRate": 0.5,
+        "subjectToMinimumPayment": true,
+        "requirements": "생애 최초 주택 구입, 취득가액 12억원 이하, 세대 구성원 전원 무주택 등 요건 충족 시 취득세 50% 감면(최대 한도 적용). 참고용 추정치.",
+        "postManagement": "취득일로부터 3개월 내 상시 거주 및 3년 이상 실거주·보유 요건 미이행 시 감면세액 추징."
+      },
+      {
+        "reductionType": "newlywed",
+        "reductionRate": 0.5,
+        "subjectToMinimumPayment": true,
+        "requirements": "혼인신고 후 일정 기간 이내, 무주택 신혼부부의 생애최초 주택 구입 요건 충족 시 취득세 50% 감면. 참고용 추정치.",
+        "postManagement": "실거주·보유 요건 미이행 시 감면세액 추징 가능."
+      },
+      {
+        "reductionType": "long_term_rental_business",
+        "reductionRate": 0.5,
+        "subjectToMinimumPayment": true,
+        "rentalDifferentialRates": [
+          { "areaBracket": "le_60", "acquisitionRequirement": "new_build", "reductionRate": 1.0 },
+          { "areaBracket": "le_60", "acquisitionRequirement": "first_sale", "reductionRate": 1.0 },
+          { "areaBracket": "gt_60_le_85", "acquisitionRequirement": "new_build", "reductionRate": 0.5 },
+          { "areaBracket": "gt_60_le_85", "acquisitionRequirement": "first_sale", "reductionRate": 0.5 }
+        ],
+        "requirements": "장기임대사업자 등록 후 신축 또는 최초 분양 임대주택 취득 시 면적 구간별 취득세 감면. 전용면적 60㎡ 이하 최대 100%(면제), 60~85㎡ 50% 감면. 단, 최소납부세제(지방세특례제한법 제177조의2)에 따라 감면세액이 200만원을 초과하면 초과분의 85%만 감면되고 나머지는 납부. 참고용 추정치.",
+        "postManagement": "의무임대기간(10년 등) 준수 및 임대료 증액 제한 요건 미이행 시 감면세액 추징. 등록 말소 시에도 추징 대상."
+      },
+      {
+        "reductionType": "none",
+        "reductionRate": 0,
+        "requirements": "감면 없음."
+      }
+    ],
+    "lowValueExemptionThreshold": 100000000,
+    "minimumPaymentThreshold": 2000000,
+    "minimumPaymentReductionRate": 0.85
+  },
+  "constraints": {
+    "maxAmount": 100000000000,
+    "maxArea": 10000
+  }
+}

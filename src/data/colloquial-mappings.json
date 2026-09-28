@@ -1,0 +1,117 @@
+[
+  {
+    "colloquial": "집 팔 때 세금",
+    "formal": "양도소득세",
+    "taxType": "capital_gains"
+  },
+  {
+    "colloquial": "집 살 때 내는 돈",
+    "formal": "취득세",
+    "taxType": "acquisition"
+  },
+  {
+    "colloquial": "집 살 때 세금",
+    "formal": "취득세",
+    "taxType": "acquisition"
+  },
+  {
+    "colloquial": "부동산 보유세",
+    "formal": "종합부동산세",
+    "taxType": "comprehensive_property"
+  },
+  {
+    "colloquial": "물려받을 때 세금",
+    "formal": "상속세",
+    "taxType": "inheritance"
+  },
+  {
+    "colloquial": "공짜로 받을 때 세금",
+    "formal": "증여세",
+    "taxType": "gift"
+  },
+  {
+    "colloquial": "집 물려줄 때",
+    "formal": "상속세",
+    "taxType": "inheritance"
+  },
+  {
+    "colloquial": "부모님한테 받을 때",
+    "formal": "증여세",
+    "taxType": "gift"
+  },
+  {
+    "colloquial": "아파트 팔면 세금",
+    "formal": "양도소득세",
+    "taxType": "capital_gains"
+  },
+  {
+    "colloquial": "집 여러 채 가지고 있으면",
+    "formal": "종합부동산세",
+    "taxType": "comprehensive_property"
+  },
+  {
+    "colloquial": "매년 내는 집 세금",
+    "formal": "재산세",
+    "taxType": "property"
+  },
+  {
+    "colloquial": "부동산 갖고 있으면 내는 세금",
+    "formal": "재산세",
+    "taxType": "property"
+  },
+  {
+    "colloquial": "아파트 구입 세금",
+    "formal": "취득세",
+    "taxType": "acquisition"
+  },
+  {
+    "colloquial": "집 사면 내는 세금",
+    "formal": "취득세",
+    "taxType": "acquisition"
+  },
+  {
+    "colloquial": "땅 팔 때 세금",
+    "formal": "양도소득세",
+    "taxType": "capital_gains"
+  },
+  {
+    "colloquial": "집값 비싸면 내는 세금",
+    "formal": "종합부동산세",
+    "taxType": "comprehensive_property"
+  },
+  {
+    "colloquial": "자녀한테 줄 때 세금",
+    "formal": "증여세",
+    "taxType": "gift"
+  },
+  {
+    "colloquial": "배우자한테 줄 때 세금",
+    "formal": "증여세",
+    "taxType": "gift"
+  },
+  {
+    "colloquial": "부동산 팔 때 남는 이익",
+    "formal": "양도차익",
+    "taxType": "capital_gains"
+  },
+  {
+    "colloquial": "집 오래 갖고 있으면 혜택",
+    "formal": "장기보유특별공제",
+    "taxType": "capital_gains"
+  },
+  {
+    "colloquial": "세금 줄이는 방법",
+    "formal": "세액공제",
+    "taxType": "capital_gains"
+  },
+  {
+    "colloquial": "처음 집 살 때 혜택",
+    "formal": "생애최초",
+    "taxType": "acquisition"
+  },
+  {
+    "colloquial": "이사할 때 세금",
+    "formal": "일시적2주택",
+    "taxType": "capital_gains"
+  }
+]

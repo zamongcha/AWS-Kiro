@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>종합부동산 서비스</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes typingDot { 0%, 60%, 100% { opacity: 0.3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-4px); } }
+    @keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+    .message-enter { animation: fadeInUp 0.3s ease-out; }
+    .typing-dot { animation: typingDot 1.4s infinite; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    .screen-enter { animation: slideInRight 0.3s ease-out forwards; }
+    .screen-enter-back { animation: slideInLeft 0.3s ease-out forwards; }
+    textarea { resize: none; overflow-y: hidden; }
+    .chat-area::-webkit-scrollbar { width: 6px; }
+    .chat-area::-webkit-scrollbar-thumb { background-color: #d1d5db; border-radius: 3px; }
+    .section-header { font-weight: 700; color: #1e40af; margin-top: 0.75rem; margin-bottom: 0.25rem; }
+    .citation { color: #2563eb; font-size: 0.75rem; vertical-align: super; cursor: pointer; }
+    .citation:hover { text-decoration: underline; }
+    .disclaimer-box { background-color: #fef3c7; border: 1px solid #f59e0b; border-radius: 0.5rem; padding: 0.75rem; margin-top: 0.75rem; font-size: 0.85rem; color: #92400e; }
+    .service-card { transition: all 0.2s ease; }
+    .service-card.active:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    .service-card.disabled { opacity: 0.6; cursor: not-allowed; }
+    .category-chip { transition: all 0.2s; }
+    .category-chip:hover { transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .feedback-btn { transition: all 0.15s; }
+    .feedback-btn:hover { transform: scale(1.05); }
+    /* ===== Calculator UI ===== */
+    .calc-field-error { border-color: #ef4444 !important; }
+    .calc-error-msg { color: #dc2626; font-size: 0.75rem; margin-top: 0.25rem; }
+    .calc-money-hint { color: #2563eb; font-size: 0.72rem; margin-top: 0.2rem; }
+    .calc-result-total { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; }
+    .calc-line-table th, .calc-line-table td { padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
+    .calc-line-table thead th { background-color: #f8fafc; font-weight: 600; color: #475569; border-bottom: 1px solid #e2e8f0; }
+    .calc-line-table tbody tr { border-bottom: 1px solid #f1f5f9; }
+    .calc-line-table tbody tr:last-child { border-bottom: none; }
+    .calc-basis { color: #64748b; font-size: 0.72rem; line-height: 1.3; }
+    .calc-amount { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .calc-amount-krw { display: block; color: #94a3b8; font-size: 0.7rem; font-weight: 400; line-height: 1.2; margin-top: 0.1rem; }
+    .calc-help-msg { color: #64748b; font-size: 0.72rem; margin-top: 0.25rem; line-height: 1.35; }
+    .calc-field-disabled { background-color: #f1f5f9; color: #94a3b8; cursor: not-allowed; }
+    .calc-notice-box { background-color: #fffbeb; border: 1px solid #fcd34d; color: #92400e; }
+    .calc-notice-title { font-weight: 600; }
+    .calc-notice-list { list-style: disc; padding-left: 1.1rem; }
+    .calc-notice-list li { margin-top: 0.15rem; }
+    .calc-result-total { position: relative; }
+    .calc-result-total .calc-total-amount { font-size: 1.875rem; line-height: 1.15; }
+    .calc-details { border: 1px solid #e2e8f0; border-radius: 1rem; background-color: #ffffff; overflow: hidden; }
+    .calc-details > summary { cursor: pointer; list-style: none; padding: 0.75rem 1rem; font-size: 0.875rem; font-weight: 600; color: #475569; background-color: #f8fafc; display: flex; align-items: center; justify-content: space-between; }
+    .calc-details > summary::-webkit-details-marker { display: none; }
+    .calc-details > summary .calc-details-arrow { transition: transform 0.15s ease; color: #94a3b8; }
+    .calc-details[open] > summary .calc-details-arrow { transform: rotate(180deg); }
+    .calc-details-body { padding: 1rem; }
+    .calc-details-body > * + * { margin-top: 1rem; }
+    .calc-copy-btn { transition: background-color 0.15s ease, color 0.15s ease; }
+    .calc-copy-btn.copied { background-color: #dcfce7; border-color: #86efac; color: #15803d; }
+
+    /* ===== Splash intro (Toss-style) ===== */
+    #splashScreen {
+      background: linear-gradient(160deg, #ffffff 0%, #f0f6ff 100%);
+    }
+    @keyframes splashFade {
+      0%   { opacity: 0; transform: scale(0.9); }
+      30%  { opacity: 1; transform: scale(1); }
+      70%  { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.02); }
+    }
+    .splash-anim { animation: splashFade 4s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .splash-house { filter: drop-shadow(0 10px 24px rgba(37, 99, 235, 0.18)); }
+
+    /* ===== Toss-style menu appearance ===== */
+    @keyframes menuFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .menu-enter { animation: menuFadeIn 0.45s ease-out forwards; }
+
+    @keyframes cardRise {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .service-card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .service-card.card-rise { opacity: 0; animation: cardRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .service-card.active:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12); }
+    .service-card.active:active { transform: scale(0.98); }
+    .service-icon-circle { transition: transform 0.2s ease; }
+    .service-card.active:hover .service-icon-circle { transform: scale(1.06); }
+
+    /* ===== Greeting + Tip banner (Toss-style) ===== */
+    .tip-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #e0edff 100%);
+      border: 1px solid #dbeafe;
+    }
+    .tip-banner .tip-icon { background-color: #dbeafe; }
+    #tipText { transition: opacity 0.25s ease; }
+    #tipText.tip-swap { opacity: 0; }
+    .menu-greet { opacity: 0; animation: cardRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .menu-tip { opacity: 0; animation: cardRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s forwards; }
+
+    /* ===== Useful sites section (Toss-style link chips) ===== */
+    .menu-links { opacity: 0; animation: cardRise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards; }
+    .site-chip {
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+    }
+    .site-chip:hover {
+      background-color: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.10);
+    }
+    .site-chip:active { transform: scale(0.97); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .splash-anim { animation: none; }
+      .menu-enter { animation: none; }
+      .service-card.card-rise { opacity: 1; animation: none; }
+      .menu-greet, .menu-tip { opacity: 1; animation: none; }
+      .menu-links { opacity: 1; animation: none; }
+      .site-chip:hover { transform: none; }
+    }
+
+    /* ===== Theme toggle button (전역 우상단 고정) ===== */
+    #themeToggle {
+      position: fixed;
+      top: 0.75rem;
+      right: 0.75rem;
+      z-index: 60;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      line-height: 1;
+      border-radius: 9999px;
+      border: 1px solid #e5e7eb;
+      background-color: #ffffff;
+      color: #374151;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    #themeToggle:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+    #themeToggle:active { transform: scale(0.95); }
+
+    /* ===================================================================
+       ===== DARK MODE (body.dark 하위에서 주요 표면 색을 오버라이드) =====
+       Tailwind CDN의 dark: variant 대신 직접 CSS로 처리한다.
+       유틸 클래스로 칠해진 배경/텍스트/보더를 어둡게 재정의해 전반적으로
+       다크하게 보이도록 하며, 대비(가독성)를 확보한다.
+       =================================================================== */
+    body.dark { background-color: #0f172a; color: #e2e8f0; }
+
+    /* 표면(배경) 오버라이드: 흰색/연회색 계열 → 어두운 슬레이트 */
+    body.dark .bg-white,
+    body.dark .bg-gray-50 { background-color: #1e293b !important; }
+    body.dark .bg-gray-100 { background-color: #334155 !important; }
+    body.dark .bg-blue-100 { background-color: #1e3a5f !important; }
+    body.dark .bg-red-100 { background-color: #4c1d1d !important; }
+
+    /* 보더 오버라이드 */
+    body.dark .border-gray-200,
+    body.dark .border-gray-300,
+    body.dark .border-gray-100 { border-color: #334155 !important; }
+
+    /* 텍스트 오버라이드: 어두운 회색 텍스트 → 밝은 톤 */
+    body.dark .text-gray-800 { color: #f1f5f9 !important; }
+    body.dark .text-gray-700 { color: #e2e8f0 !important; }
+    body.dark .text-gray-600 { color: #cbd5e1 !important; }
+    body.dark .text-gray-500 { color: #94a3b8 !important; }
+    body.dark .text-gray-400 { color: #94a3b8 !important; }
+
+    /* 헤더/푸터 그림자 톤 다운 */
+    body.dark .shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.4) !important; }
+
+    /* 카드 hover 그림자 */
+    body.dark .service-card.active:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
+
+    /* 준비중(비활성) 카드 */
+    body.dark .service-card.disabled { background-color: #172033 !important; }
+    body.dark .service-card.disabled .bg-gray-100 { background-color: #334155 !important; }
+    body.dark .bg-gray-200 { background-color: #475569 !important; }
+
+    /* 스플래시 배경 그라디언트 */
+    body.dark #splashScreen { background: linear-gradient(160deg, #0f172a 0%, #14213d 100%); }
+
+    /* 팁 배너 */
+    body.dark .tip-banner { background: linear-gradient(135deg, #172033 0%, #1e2c44 100%); border-color: #334155; }
+    body.dark .tip-banner .tip-icon { background-color: #1e3a5f; }
+    body.dark #tipBanner .bg-white\/70 { background-color: rgba(30,41,59,0.7) !important; }
+
+    /* 유용한 사이트 칩 */
+    body.dark .site-chip { background-color: #1e293b; border-color: #334155; color: #cbd5e1; }
+    body.dark .site-chip:hover { background-color: #1e3a5f; border-color: #3b5b86; color: #93c5fd; }
+
+    /* 입력창(textarea/input) */
+    body.dark textarea,
+    body.dark input[type="file"] { background-color: #0f172a; color: #e2e8f0; }
+    body.dark textarea::placeholder { color: #64748b; }
+
+    /* 채팅 사용자 말풍선(파란색)은 유지, AI 말풍선은 bg-white 오버라이드로 처리됨 */
+    body.dark .chat-area::-webkit-scrollbar-thumb { background-color: #475569; }
+
+    /* 계약서 업로드 영역(연한 파랑 배경) */
+    body.dark .bg-blue-50 { background-color: #172033 !important; }
+    body.dark .border-blue-300 { border-color: #3b5b86 !important; }
+    body.dark .text-blue-800 { color: #93c5fd !important; }
+    body.dark .text-blue-700 { color: #93c5fd !important; }
+    body.dark .file\:bg-blue-100::file-selector-button { background-color: #1e3a5f; color: #bfdbfe; }
+
+    /* 계산기 폼/결과 */
+    body.dark .calc-line-table thead th { background-color: #172033; color: #cbd5e1; border-bottom-color: #334155; }
+    body.dark .calc-line-table tbody tr { border-bottom-color: #263449; }
+    body.dark .calc-basis { color: #94a3b8; }
+    body.dark .calc-amount-krw { color: #94a3b8; }
+    body.dark .calc-help-msg { color: #94a3b8; }
+    body.dark .calc-money-hint { color: #93c5fd; }
+    body.dark .calc-result-total { background: linear-gradient(135deg, #172033, #1e3a5f) !important; border-color: #3b5b86 !important; }
+    body.dark .calc-details { background-color: #1e293b; border-color: #334155; }
+    body.dark .calc-details > summary { background-color: #172033; color: #cbd5e1; }
+    body.dark .calc-field-disabled { background-color: #172033; color: #64748b; }
+    body.dark .calc-notice-box { background-color: #2a2410 !important; border-color: #5c4a13 !important; color: #fcd34d !important; }
+    body.dark .calc-copy-btn.copied { background-color: #14432a; border-color: #22c55e; color: #86efac; }
+
+    /* 안내/경고/에러 박스 */
+    body.dark .disclaimer-box { background-color: #2a2410; border-color: #5c4a13; color: #fcd34d; }
+    body.dark .bg-red-50 { background-color: #2a1414 !important; }
+    body.dark .border-red-200 { border-color: #5c2626 !important; }
+    body.dark .text-red-700 { color: #fca5a5 !important; }
+    body.dark .bg-yellow-50, body.dark .bg-amber-50 { background-color: #2a2410 !important; }
+
+    /* 섹션 헤더(답변 내부) */
+    body.dark .section-header { color: #93c5fd; }
+    body.dark .citation { color: #93c5fd; }
+
+    /* 아이콘 원형 배경(카드) 파스텔 톤 다운 */
+    body.dark .bg-emerald-50 { background-color: #10261d !important; }
+    body.dark .bg-amber-50 { background-color: #2a2410 !important; }
+    body.dark .bg-violet-50 { background-color: #211a33 !important; }
+    body.dark .bg-rose-50 { background-color: #2e1620 !important; }
+    body.dark .bg-sky-50 { background-color: #0c2434 !important; }
+    body.dark .bg-indigo-50 { background-color: #1a1f3a !important; }
+    body.dark .bg-blue-50 { background-color: #172033 !important; }
+
+    /* 테마 토글 버튼 자체 다크 스타일 */
+    body.dark #themeToggle { background-color: #1e293b; border-color: #334155; color: #fbbf24; box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+  </style>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col overflow-hidden">
+  <!-- 전역 다크 모드 토글 버튼 (우상단 고정, 세 화면 모두 커버) -->
+  <button type="button" id="themeToggle" onclick="toggleTheme()" aria-label="다크 모드 전환" title="다크 모드 전환">
+    <span id="themeToggleIcon">🌙</span>
+  </button>
+  <!-- 스플래시 인트로 (최초 진입에만 표시) -->
+  <div id="splashScreen" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+    <div class="splash-anim flex flex-col items-center">
+      <svg class="splash-house w-24 h-24 mb-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 11.2 12 4l9 7.2" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 20v-5h4v5" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1 class="text-2xl font-bold text-gray-800">🏢 종합부동산 서비스</h1>
+      <p class="text-sm text-gray-500 mt-2">AI 기반 부동산 법률·세무·거래 종합 플랫폼</p>
+    </div>
+  </div>
+  <div id="mainMenuScreen" class="h-full flex flex-col">
+    <header class="bg-white border-b border-gray-200 px-4 py-5 shadow-sm">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-800">🏢 종합부동산 서비스</h1>
+        <p class="text-sm text-gray-500 mt-1.5">AI 기반 부동산 법률·세무·거래 종합 플랫폼</p>
+      </div>
+    </header>
+    <main class="flex-1 overflow-y-auto flex flex-col justify-start">
+      <div class="w-full max-w-6xl mx-auto px-5 py-6 sm:py-8 my-auto">
+        <!-- 인사말 + 오늘 날짜 (renderGreeting로 채움) -->
+        <div id="greetingSection" class="menu-greet mb-4 sm:mb-5">
+          <h2 id="greetingTitle" class="text-2xl sm:text-3xl font-bold text-gray-800"></h2>
+          <p class="text-sm text-gray-500 mt-1.5"><span id="greetingSubtitle"></span> · <span id="greetingDate"></span></p>
+        </div>
+        <!-- 오늘의 부동산 팁 배너 (renderTip로 채움) -->
+        <div id="tipBanner" class="menu-tip tip-banner rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4 mb-5 sm:mb-6 flex items-center gap-3">
+          <div class="tip-icon flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-xl">💡</div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-semibold text-blue-700">오늘의 팁</span>
+              <span class="text-[10px] text-blue-400 bg-white/70 px-1.5 py-0.5 rounded-full">참고용</span>
+            </div>
+            <p id="tipText" class="text-sm text-gray-700 leading-relaxed mt-0.5"></p>
+          </div>
+          <button type="button" id="tipRefreshBtn" onclick="renderTip()" class="flex-shrink-0 text-xs text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1 px-1.5 py-1 rounded-lg hover:bg-white/60" aria-label="다른 팁 보기">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <span class="hidden sm:inline">다른 팁</span>
+          </button>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5" id="serviceGrid"></div>
+
+        <!-- 유용한 사이트 바로가기 모음 -->
+        <section id="usefulSites" class="menu-links mt-8 sm:mt-10 pt-6 border-t border-gray-100" aria-labelledby="usefulSitesLabel">
+          <h2 id="usefulSitesLabel" class="text-xs font-semibold text-gray-500 tracking-wide mb-4">🔗 유용한 사이트</h2>
+          <div class="space-y-4">
+            <div>
+              <p class="text-[11px] font-medium text-gray-400 mb-2">세금·지방세</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://hometax.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🧾</span>국세청 홈택스</a>
+                <a href="https://www.wetax.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🧾</span>위택스(지방세)</a>
+                <a href="https://etax.seoul.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🧾</span>서울 이택스</a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[11px] font-medium text-gray-400 mb-2">시세·공시가격</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://rt.molit.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>📈</span>실거래가 공개시스템</a>
+                <a href="https://www.realtyprice.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>📈</span>부동산공시가격 알리미</a>
+                <a href="https://www.reb.or.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>📈</span>한국부동산원</a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[11px] font-medium text-gray-400 mb-2">등기·증명서</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://www.iros.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>📄</span>인터넷등기소</a>
+                <a href="https://www.gov.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>📄</span>정부24</a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[11px] font-medium text-gray-400 mb-2">임대차·보증</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://www.renthome.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🏠</span>렌트홈(임대등록)</a>
+                <a href="https://www.khug.or.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🏠</span>주택도시보증공사 HUG</a>
+                <a href="https://rtms.molit.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🏠</span>부동산거래관리시스템(전월세신고)</a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[11px] font-medium text-gray-400 mb-2">법령·판례</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>⚖️</span>국가법령정보센터</a>
+                <a href="https://glaw.scourt.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>⚖️</span>대법원 종합법률정보</a>
+                <a href="https://easylaw.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>⚖️</span>찾기쉬운 생활법령</a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[11px] font-medium text-gray-400 mb-2">청약·주거지원</p>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🏡</span>청약홈</a>
+                <a href="https://www.myhome.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🏡</span>마이홈포털</a>
+                <a href="https://nhuf.molit.go.kr" target="_blank" rel="noopener noreferrer" class="site-chip inline-flex items-center gap-1.5 bg-gray-50 border border-gray-200 text-gray-700 rounded-full px-3 py-1.5 text-xs sm:text-sm"><span>🏡</span>주택도시기금</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div id="serviceScreen" class="h-full flex flex-col hidden">
+    <header class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-1.5 sm:gap-3">
+            <button onclick="goBackToMenu()" class="text-gray-500 hover:text-gray-800 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="메인 메뉴로" title="메인 메뉴로">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button onclick="goBackToMenu()" class="text-gray-500 hover:text-blue-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="홈(메인 메뉴)" title="홈으로">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5 12 4l9 7.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/></svg>
+            </button>
+            <div>
+              <h1 class="text-xl font-bold text-gray-800" id="serviceTitle"></h1>
+              <p class="text-sm text-gray-500" id="serviceSubtitle"></p>
+            </div>
+          </div>
+
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3" id="categories"></div>
+      </div>
+    </header>
+    <main class="flex-1 overflow-y-auto chat-area" id="chatArea">
+      <div class="max-w-4xl mx-auto px-4 py-6 space-y-4" id="messages"></div>
+    </main>
+    <footer class="bg-white border-t border-gray-200 px-4 py-3">
+      <div class="max-w-4xl mx-auto">
+        <!-- 계약서 업로드 영역 (계약서 서비스에서만 표시) -->
+        <div id="contractUpload" class="hidden mb-3 border border-dashed border-blue-300 bg-blue-50 rounded-xl px-4 py-3">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="text-sm font-medium text-blue-800">📎 계약서 사진/PDF 올리기</span>
+            <input id="contractFileInput" type="file" accept="image/*,application/pdf" class="text-xs text-gray-600 file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200 file:cursor-pointer" />
+            <button id="contractUploadBtn" type="button" onclick="uploadContractFile()" class="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-lg px-3 py-1.5 text-xs font-medium transition-colors">텍스트 추출</button>
+            <span id="contractUploadStatus" class="text-xs text-gray-500"></span>
+          </div>
+          <div id="contractPreview" class="hidden mt-3">
+            <img id="contractPreviewImg" alt="계약서 미리보기" class="max-h-40 rounded-lg border border-gray-200" />
+          </div>
+          <p class="text-xs text-gray-500 mt-2">이미지(JPG/PNG) 또는 PDF, 최대 20MB. 추출된 텍스트는 아래 입력창에서 확인·수정 후 전송하세요.</p>
+        </div>
+        <div class="flex gap-3 items-end">
+          <div class="flex-1 relative">
+            <textarea id="queryInput" class="w-full border border-gray-300 rounded-xl px-4 py-3 pr-16 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="질문을 입력하세요..." rows="1" maxlength="1000"></textarea>
+            <span id="charCount" class="absolute right-3 bottom-2 text-xs text-gray-400">0/1000</span>
+          </div>
+          <button id="sendBtn" onclick="sendMessage()" class="bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl px-4 py-3 transition-colors flex items-center gap-1.5 font-medium text-sm" disabled>
+            <span>전송</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </button>
+        </div>
+        <div class="flex justify-between items-center mt-2 px-1">
+          <p class="text-xs text-gray-400">Enter로 전송, Shift+Enter로 줄바꿈</p>
+          <p class="text-xs text-gray-400" id="sessionInfo">세션 ID: 새 세션</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="calcScreen" class="h-full flex flex-col hidden">
+    <header class="bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center gap-1.5 sm:gap-3">
+          <button onclick="goBackToMenu()" class="text-gray-500 hover:text-gray-800 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="메인 메뉴로" title="메인 메뉴로">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button onclick="goBackToMenu()" class="text-gray-500 hover:text-blue-600 transition-colors p-1 rounded-lg hover:bg-gray-100" aria-label="홈(메인 메뉴)" title="홈으로">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5 12 4l9 7.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/></svg>
+          </button>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800" id="calcTitle"></h1>
+            <p class="text-sm text-gray-500" id="calcSubtitle"></p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-1 overflow-y-auto chat-area" id="calcArea">
+      <div class="max-w-3xl mx-auto px-4 py-6 space-y-5">
+        <div class="flex justify-end">
+          <button type="button" id="calcRateTableBtn" onclick="toggleRateTablePanel()" class="text-sm bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 rounded-xl px-4 py-2 transition-colors font-medium">📊 세율 확인하기</button>
+        </div>
+        <div id="calcRateTablePanel" class="hidden bg-white border border-gray-200 rounded-2xl p-5 shadow-sm"></div>
+        <form id="calcForm" class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm space-y-4" novalidate>
+          <div id="calcFields" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+          <div id="calcFormError" class="hidden text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2"></div>
+          <button type="button" id="calcSampleBtn" onclick="fillCalcSample()" class="w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 rounded-xl px-4 py-2.5 transition-colors font-medium text-sm">✨ 예시로 채우기</button>
+          <button type="submit" id="calcSubmitBtn" class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl px-4 py-3 transition-colors font-medium text-sm">계산하기</button>
+        </form>
+        <div id="calcResult" class="space-y-4"></div>
+        <div id="calcAiSection" class="hidden bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold text-gray-800 text-sm mb-1">🤖 AI에게 물어보기</h3>
+          <p class="text-xs text-gray-500 mb-3">계산 결과가 다루지 못한 예외·감면 요건·절세 방법을 자연어로 물어보세요. 계산 결과는 그대로 유지됩니다.</p>
+          <div class="flex gap-2 items-end">
+            <textarea id="calcAiInput" class="flex-1 border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="2" placeholder="예: 생애최초 감면을 추가로 받을 수 있는 조건이 궁금해요"></textarea>
+            <button type="button" id="calcAiBtn" onclick="askCalcAi()" class="bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white rounded-xl px-4 py-2.5 transition-colors font-medium text-sm whitespace-nowrap">질문하기</button>
+          </div>
+          <div id="calcAiResponse" class="mt-4"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white border-t border-gray-200 px-4 py-3 text-center">
+      <p class="text-xs text-gray-400">참고용 계산 결과입니다 · 법적 효력이 없으며 정확한 세액·요율은 전문가 상담을 권장합니다</p>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

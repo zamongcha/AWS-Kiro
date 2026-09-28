@@ -1,0 +1,167 @@
+[
+  {
+    "term": "취득세",
+    "synonyms": ["부동산취득세", "취득과세", "취득관련세금", "부동산구입세"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "양도소득세",
+    "synonyms": ["양도세", "양도차익세", "부동산양도세", "매도세"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "종합부동산세",
+    "synonyms": ["종부세", "종합부동산과세", "보유세", "부동산보유세"],
+    "taxType": "comprehensive_property"
+  },
+  {
+    "term": "재산세",
+    "synonyms": ["부동산재산세", "건물재산세", "토지재산세", "주택재산세"],
+    "taxType": "property"
+  },
+  {
+    "term": "증여세",
+    "synonyms": ["부동산증여세", "증여과세", "증여관련세금", "무상이전세"],
+    "taxType": "gift"
+  },
+  {
+    "term": "상속세",
+    "synonyms": ["부동산상속세", "상속과세", "상속관련세금", "유산세"],
+    "taxType": "inheritance"
+  },
+  {
+    "term": "과세표준",
+    "synonyms": ["과표", "세금기준금액", "과세기준", "세금산정기준"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "양도차익",
+    "synonyms": ["매매차익", "양도이익", "매도이익", "처분이익"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "취득가액",
+    "synonyms": ["매입가", "취득원가", "매수가격", "구입가격"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "양도가액",
+    "synonyms": ["매도가", "양도가격", "매각가격", "처분가격"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "공시가격",
+    "synonyms": ["공시지가", "기준시가", "공시시가", "표준시가"],
+    "taxType": "comprehensive_property"
+  },
+  {
+    "term": "세율",
+    "synonyms": ["적용세율", "과세율", "세금비율", "부과율"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "비과세",
+    "synonyms": ["세금면제", "면세", "세금감면", "과세제외"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "감면",
+    "synonyms": ["세금감면", "세액감면", "세금혜택", "감세"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "누진세율",
+    "synonyms": ["누진공제", "초과누진", "누진과세", "단계별세율"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "장기보유특별공제",
+    "synonyms": ["장특공", "장기보유공제", "보유기간공제", "장기공제"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "1세대1주택",
+    "synonyms": ["일세대일주택", "1가구1주택", "일가구일주택", "단독주택보유"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "다주택자",
+    "synonyms": ["다주택보유자", "2주택이상", "다주택소유자", "복수주택자"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "조정대상지역",
+    "synonyms": ["조정지역", "규제지역", "투기과열지구", "투기지역"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "실거래가",
+    "synonyms": ["실거래가격", "실매매가", "실제거래가격", "시가"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "세액공제",
+    "synonyms": ["세금공제", "공제금액", "세액감면", "공제혜택"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "필요경비",
+    "synonyms": ["경비공제", "양도경비", "취득경비", "기타경비"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "기본공제",
+    "synonyms": ["기본세액공제", "인적공제", "기초공제"],
+    "taxType": "inheritance"
+  },
+  {
+    "term": "증여공제",
+    "synonyms": ["증여세공제", "증여면제한도", "증여비과세한도"],
+    "taxType": "gift"
+  },
+  {
+    "term": "상속공제",
+    "synonyms": ["상속세공제", "상속면제한도", "일괄공제"],
+    "taxType": "inheritance"
+  },
+  {
+    "term": "신고납부",
+    "synonyms": ["세금신고", "납세신고", "자진신고", "과세신고"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "가산세",
+    "synonyms": ["추가세금", "가산금", "벌과금", "지연가산세"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "중과세",
+    "synonyms": ["중과", "추가과세", "가중과세", "중과세율"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "생애최초",
+    "synonyms": ["생애최초주택", "첫주택구입", "첫집", "생애최초취득"],
+    "taxType": "acquisition"
+  },
+  {
+    "term": "일시적2주택",
+    "synonyms": ["일시적이주택", "이사목적2주택", "대체취득", "일시2주택"],
+    "taxType": "capital_gains"
+  },
+  {
+    "term": "공동명의",
+    "synonyms": ["공동소유", "공유", "지분소유", "부부공동명의"],
+    "taxType": "comprehensive_property"
+  },
+  {
+    "term": "분납",
+    "synonyms": ["세금분할납부", "분할납부", "나눠서납부"],
+    "taxType": "inheritance"
+  },
+  {
+    "term": "연부연납",
+    "synonyms": ["분할납부", "연분할납부", "장기분납"],
+    "taxType": "inheritance"
+  }
+]

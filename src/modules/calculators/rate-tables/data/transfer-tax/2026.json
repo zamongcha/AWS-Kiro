@@ -1,0 +1,62 @@
+{
+  "baseYear": 2026,
+  "version": "2026.1",
+  "metadata": {
+    "description": "양도소득세 기준표 (2026년 기준, 2025년 기준표 기반 참고용 추정치). 실제 2026년 개정 세법을 반영한 값이 아니며 2025년 기준표 값을 그대로 복제한 참고용 추정치임. 세율·공제·한도액은 일반 통용값 근사치이며 최신 법령과 다를 수 있음.",
+    "effectiveFrom": "2026-01-01"
+  },
+  "data": {
+    "basicRateBrackets": [
+      { "minTaxBase": 0, "maxTaxBase": 14000000, "rate": 0.06, "progressiveDeduction": 0 },
+      { "minTaxBase": 14000000, "maxTaxBase": 50000000, "rate": 0.15, "progressiveDeduction": 1260000 },
+      { "minTaxBase": 50000000, "maxTaxBase": 88000000, "rate": 0.24, "progressiveDeduction": 5760000 },
+      { "minTaxBase": 88000000, "maxTaxBase": 150000000, "rate": 0.35, "progressiveDeduction": 15440000 },
+      { "minTaxBase": 150000000, "maxTaxBase": 300000000, "rate": 0.38, "progressiveDeduction": 19940000 },
+      { "minTaxBase": 300000000, "maxTaxBase": 500000000, "rate": 0.4, "progressiveDeduction": 25940000 },
+      { "minTaxBase": 500000000, "maxTaxBase": 1000000000, "rate": 0.42, "progressiveDeduction": 35940000 },
+      { "minTaxBase": 1000000000, "rate": 0.45, "progressiveDeduction": 65940000 }
+    ],
+    "heavyMultiSurcharge": {
+      "twoHouse": 0.2,
+      "threeOrMoreHouse": 0.3
+    },
+    "shortTermRates": {
+      "under1Year": 0.7,
+      "from1To2Year": 0.6
+    },
+    "basicDeductionAmount": 2500000,
+    "longTermDeductionTable1": [
+      { "minYears": 0, "maxYears": 3, "deductionRate": 0 },
+      { "minYears": 3, "maxYears": 4, "deductionRate": 0.24 },
+      { "minYears": 4, "maxYears": 5, "deductionRate": 0.32 },
+      { "minYears": 5, "maxYears": 6, "deductionRate": 0.4 },
+      { "minYears": 6, "maxYears": 7, "deductionRate": 0.48 },
+      { "minYears": 7, "maxYears": 8, "deductionRate": 0.56 },
+      { "minYears": 8, "maxYears": 9, "deductionRate": 0.64 },
+      { "minYears": 9, "maxYears": 10, "deductionRate": 0.72 },
+      { "minYears": 10, "deductionRate": 0.8 }
+    ],
+    "longTermDeductionTable2": [
+      { "minYears": 0, "maxYears": 3, "deductionRate": 0 },
+      { "minYears": 3, "maxYears": 4, "deductionRate": 0.06 },
+      { "minYears": 4, "maxYears": 5, "deductionRate": 0.08 },
+      { "minYears": 5, "maxYears": 6, "deductionRate": 0.1 },
+      { "minYears": 6, "maxYears": 7, "deductionRate": 0.12 },
+      { "minYears": 7, "maxYears": 8, "deductionRate": 0.14 },
+      { "minYears": 8, "maxYears": 9, "deductionRate": 0.16 },
+      { "minYears": 9, "maxYears": 10, "deductionRate": 0.18 },
+      { "minYears": 10, "maxYears": 11, "deductionRate": 0.2 },
+      { "minYears": 11, "maxYears": 12, "deductionRate": 0.22 },
+      { "minYears": 12, "maxYears": 13, "deductionRate": 0.24 },
+      { "minYears": 13, "maxYears": 14, "deductionRate": 0.26 },
+      { "minYears": 14, "maxYears": 15, "deductionRate": 0.28 },
+      { "minYears": 15, "deductionRate": 0.3 }
+    ],
+    "oneHouseExemptionThreshold": 1200000000,
+    "localIncomeTaxRate": 0.1
+  },
+  "constraints": {
+    "maxAmount": 100000000000,
+    "maxHoldingPeriod": 600
+  }
+}

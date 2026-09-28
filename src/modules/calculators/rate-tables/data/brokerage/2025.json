@@ -1,0 +1,37 @@
+{
+  "baseYear": 2025,
+  "version": "2025.1",
+  "metadata": {
+    "description": "중개수수료 기준표 (참고용 추정치, 2025년 기준). 상한 요율·한도액은 일반 통용값 근사치이며 지역 조례·최신 법령과 다를 수 있음.",
+    "effectiveFrom": "2025-01-01"
+  },
+  "data": {
+    "leaseConversionMultiplier": 100,
+    "leaseConversionFallbackMultiplier": 70,
+    "leaseConversionThreshold": 50000000,
+    "rateBrackets": [
+      { "transactionType": "sale_exchange", "propertyType": "house", "minAmount": 0, "maxAmount": 50000000, "upperRate": 0.006, "capAmount": 250000 },
+      { "transactionType": "sale_exchange", "propertyType": "house", "minAmount": 50000000, "maxAmount": 200000000, "upperRate": 0.005, "capAmount": 800000 },
+      { "transactionType": "sale_exchange", "propertyType": "house", "minAmount": 200000000, "maxAmount": 900000000, "upperRate": 0.004 },
+      { "transactionType": "sale_exchange", "propertyType": "house", "minAmount": 900000000, "maxAmount": 1200000000, "upperRate": 0.005 },
+      { "transactionType": "sale_exchange", "propertyType": "house", "minAmount": 1200000000, "maxAmount": 1500000000, "upperRate": 0.006 },
+      { "transactionType": "sale_exchange", "propertyType": "house", "minAmount": 1500000000, "upperRate": 0.007 },
+
+      { "transactionType": "lease", "propertyType": "house", "minAmount": 0, "maxAmount": 50000000, "upperRate": 0.005, "capAmount": 200000 },
+      { "transactionType": "lease", "propertyType": "house", "minAmount": 50000000, "maxAmount": 100000000, "upperRate": 0.004, "capAmount": 300000 },
+      { "transactionType": "lease", "propertyType": "house", "minAmount": 100000000, "maxAmount": 600000000, "upperRate": 0.003 },
+      { "transactionType": "lease", "propertyType": "house", "minAmount": 600000000, "maxAmount": 900000000, "upperRate": 0.004 },
+      { "transactionType": "lease", "propertyType": "house", "minAmount": 900000000, "maxAmount": 1200000000, "upperRate": 0.005 },
+      { "transactionType": "lease", "propertyType": "house", "minAmount": 1200000000, "upperRate": 0.006 },
+
+      { "transactionType": "sale_exchange", "propertyType": "officetel", "minAmount": 0, "upperRate": 0.005 },
+      { "transactionType": "lease", "propertyType": "officetel", "minAmount": 0, "upperRate": 0.004 },
+
+      { "transactionType": "sale_exchange", "propertyType": "other", "minAmount": 0, "upperRate": 0.009 },
+      { "transactionType": "lease", "propertyType": "other", "minAmount": 0, "upperRate": 0.009 }
+    ]
+  },
+  "constraints": {
+    "maxAmount": 100000000000
+  }
+}

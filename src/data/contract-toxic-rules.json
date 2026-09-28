@@ -1,0 +1,274 @@
+{
+  "sale": [
+    {
+      "contract_type": "sale",
+      "rule_id": "sale-toxic-001",
+      "rule_category": "위약금",
+      "pattern_text": "매수인의 사정으로 계약이 해제될 경우 계약금은 위약금으로 매도인에게 귀속되며 매수인은 어떠한 반환도 청구할 수 없다",
+      "risk_type": "과다 위약금",
+      "risk_reason": "매수인에게 일방적으로 불리한 위약금 조항으로, 손해배상 예정액이 부당하게 과다한 경우 민법 제398조 제2항에 따라 감액될 수 있으나 조항 자체가 매수인의 반환청구권을 원천 배제하여 불공정하다",
+      "is_required_clause": false,
+      "applicable_perspective": "buyer",
+      "legal_basis": "민법 제398조"
+    },
+    {
+      "contract_type": "sale",
+      "rule_id": "sale-toxic-002",
+      "rule_category": "소유권이전",
+      "pattern_text": "잔금 지급 후 소유권이전등기 시기는 매도인이 임의로 정할 수 있으며 매수인은 이에 이의를 제기하지 않는다",
+      "risk_type": "소유권이전 지연 위험",
+      "risk_reason": "소유권이전등기 시기를 매도인이 임의로 정하도록 하여 매수인이 대금을 완납하고도 소유권을 확보하지 못하는 위험이 발생한다",
+      "is_required_clause": false,
+      "applicable_perspective": "buyer",
+      "legal_basis": "민법 제568조"
+    },
+    {
+      "contract_type": "sale",
+      "rule_id": "sale-toxic-003",
+      "rule_category": "하자담보책임",
+      "pattern_text": "목적물의 하자에 대하여 매도인은 인도 후 일체의 담보책임을 부담하지 않는다",
+      "risk_type": "하자담보책임 면제",
+      "risk_reason": "매도인의 하자담보책임을 전면 면제하는 조항으로, 매도인이 알고 고지하지 않은 하자에 대해서는 면책특약이 무효가 될 수 있으나 매수인의 권리 행사를 사실상 제한한다",
+      "is_required_clause": false,
+      "applicable_perspective": "buyer",
+      "legal_basis": "민법 제580조"
+    },
+    {
+      "contract_type": "sale",
+      "rule_id": "sale-toxic-004",
+      "rule_category": "권리관계",
+      "pattern_text": "등기부상 근저당권 등 제한물권은 매수인이 인수하기로 하며 매도인은 말소 의무를 지지 않는다",
+      "risk_type": "제한물권 인수 강제",
+      "risk_reason": "매도인이 부담해야 할 근저당권 등 제한물권 말소 의무를 매수인에게 전가하여 매수인이 예상치 못한 채무를 인수하게 될 위험이 있다",
+      "is_required_clause": false,
+      "applicable_perspective": "buyer",
+      "legal_basis": "민법 제576조"
+    },
+    {
+      "contract_type": "sale",
+      "rule_id": "sale-toxic-005",
+      "rule_category": "계약해제",
+      "pattern_text": "매도인은 더 높은 가격의 매수 희망자가 나타날 경우 계약금의 배액을 상환하지 않고 계약을 해제할 수 있다",
+      "risk_type": "일방적 해제권",
+      "risk_reason": "매도인에게 계약금 배액 상환 없이 일방적 해제권을 부여하여 매수인의 계약상 지위를 심각하게 불안정하게 만드는 불공정 조항이다",
+      "is_required_clause": false,
+      "applicable_perspective": "buyer",
+      "legal_basis": "민법 제565조"
+    },
+    {
+      "contract_type": "sale",
+      "rule_id": "sale-toxic-006",
+      "rule_category": "비용부담",
+      "pattern_text": "취득세, 등기비용은 물론 매도인에게 부과되는 양도소득세까지 전액 매수인이 부담한다",
+      "risk_type": "부당한 비용 전가",
+      "risk_reason": "매도인이 부담해야 할 양도소득세를 매수인에게 전가하여 매수인이 예상치 못한 세금 부담을 지게 되는 조항이다",
+      "is_required_clause": false,
+      "applicable_perspective": "buyer",
+      "legal_basis": "소득세법 제88조"
+    }
+  ],
+  "jeonse": [
+    {
+      "contract_type": "jeonse",
+      "rule_id": "jeonse-toxic-001",
+      "rule_category": "보증금반환",
+      "pattern_text": "임대차 종료 시 임대인은 다음 임차인이 구해진 이후에 보증금을 반환한다",
+      "risk_type": "보증금 반환 지연",
+      "risk_reason": "보증금 반환을 다음 임차인 유치 조건에 결부시켜 임대차 종료 후에도 임차인이 보증금을 즉시 반환받지 못하게 하는 전형적 독소조항이다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제3조의2"
+    },
+    {
+      "contract_type": "jeonse",
+      "rule_id": "jeonse-toxic-002",
+      "rule_category": "대항력",
+      "pattern_text": "임차인은 계약 기간 중 전입신고 및 확정일자를 받지 않기로 한다",
+      "risk_type": "대항력·우선변제권 상실",
+      "risk_reason": "전입신고와 확정일자를 포기하도록 하여 임차인의 대항력과 우선변제권을 상실시키는 조항으로, 경매 시 보증금 회수를 불가능하게 만들 수 있다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제3조"
+    },
+    {
+      "contract_type": "jeonse",
+      "rule_id": "jeonse-toxic-003",
+      "rule_category": "근저당",
+      "pattern_text": "임대인은 계약 이후 임차 목적물에 추가로 근저당권을 설정할 수 있으며 임차인은 이에 동의한다",
+      "risk_type": "선순위 채권 증가 위험",
+      "risk_reason": "계약 후 추가 근저당 설정에 사전 동의하도록 하여 임차인의 보증금이 후순위로 밀려 전세사기·깡통전세 위험이 커진다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제3조의2"
+    },
+    {
+      "contract_type": "jeonse",
+      "rule_id": "jeonse-toxic-004",
+      "rule_category": "계약갱신",
+      "pattern_text": "임차인은 계약갱신요구권을 행사하지 않으며 임대인의 갱신 거절에 이의를 제기하지 않는다",
+      "risk_type": "계약갱신요구권 포기",
+      "risk_reason": "주택임대차보호법상 임차인에게 보장된 계약갱신요구권을 사전에 포기시키는 조항으로, 임차인에게 불리한 약정은 효력이 없다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제6조의3"
+    },
+    {
+      "contract_type": "jeonse",
+      "rule_id": "jeonse-toxic-005",
+      "rule_category": "원상복구",
+      "pattern_text": "임차인은 노후로 인한 자연 손상을 포함한 모든 수선 및 원상복구 비용을 부담한다",
+      "risk_type": "과도한 원상복구 의무",
+      "risk_reason": "통상의 사용에 따른 자연 손상이나 임대인이 부담해야 할 대규모 수선까지 임차인에게 전가하여 부당하게 과도한 원상복구 의무를 지운다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민법 제623조"
+    },
+    {
+      "contract_type": "jeonse",
+      "rule_id": "jeonse-toxic-006",
+      "rule_category": "권리보전",
+      "pattern_text": "임차인은 임대인의 사전 서면 동의 없이 전세권 설정등기나 임차권등기명령을 신청할 수 없다",
+      "risk_type": "권리보전 수단 제한",
+      "risk_reason": "임차인의 전세권 설정이나 임차권등기명령 신청을 제한하여 보증금 회수를 위한 법적 권리보전 수단을 봉쇄하는 조항이다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제3조의3"
+    }
+  ],
+  "wolse": [
+    {
+      "contract_type": "wolse",
+      "rule_id": "wolse-toxic-001",
+      "rule_category": "차임연체",
+      "pattern_text": "월세를 1회라도 연체할 경우 임대인은 즉시 계약을 해지하고 임차인을 강제 퇴거시킬 수 있다",
+      "risk_type": "과도한 해지·퇴거 조건",
+      "risk_reason": "1회 연체만으로 즉시 해지와 강제 퇴거를 허용하는 조항으로, 주택임대차의 경우 2기 차임 연체를 해지 요건으로 하는 법 취지에 반한다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제6조"
+    },
+    {
+      "contract_type": "wolse",
+      "rule_id": "wolse-toxic-002",
+      "rule_category": "차임증액",
+      "pattern_text": "임대인은 계약 기간 중 언제든지 월세를 자유롭게 인상할 수 있으며 임차인은 이에 응하여야 한다",
+      "risk_type": "무제한 차임 증액",
+      "risk_reason": "법정 증액 한도(5%)와 증액 청구 제한 기간을 무시하고 임대인이 임의로 월세를 인상할 수 있게 하여 임차인에게 불리하다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "주택임대차보호법 제7조"
+    },
+    {
+      "contract_type": "wolse",
+      "rule_id": "wolse-toxic-003",
+      "rule_category": "관리비",
+      "pattern_text": "관리비 항목과 산정 기준은 임대인이 정하며 임차인은 임대인이 청구하는 금액을 납부한다",
+      "risk_type": "불투명한 관리비 부과",
+      "risk_reason": "관리비 항목과 산정 근거를 명시하지 않고 임대인이 임의로 청구하도록 하여 부당한 관리비 부담이 발생할 수 있다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민법 제623조"
+    },
+    {
+      "contract_type": "wolse",
+      "rule_id": "wolse-toxic-004",
+      "rule_category": "보증금상계",
+      "pattern_text": "연체 차임이 있을 경우 임대인은 별도 통지 없이 보증금에서 임의로 공제하고 부족분을 즉시 청구한다",
+      "risk_type": "보증금 임의 공제",
+      "risk_reason": "통지 절차 없이 보증금에서 임의 공제와 즉시 부족분 청구를 허용하여 임차인이 정산 내역을 확인할 기회를 박탈한다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민법 제618조"
+    },
+    {
+      "contract_type": "wolse",
+      "rule_id": "wolse-toxic-005",
+      "rule_category": "수선의무",
+      "pattern_text": "보일러, 배관 등 주요 설비의 고장 수리 비용은 원인을 불문하고 전부 임차인이 부담한다",
+      "risk_type": "임대인 수선의무 전가",
+      "risk_reason": "임대인이 부담해야 할 주요 설비의 수선의무를 원인을 불문하고 임차인에게 전가하여 부당하다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민법 제623조"
+    },
+    {
+      "contract_type": "wolse",
+      "rule_id": "wolse-toxic-006",
+      "rule_category": "중도해지",
+      "pattern_text": "임차인이 계약 기간 만료 전 퇴거할 경우 남은 기간의 월세 전액과 새 임차인 중개보수를 배상한다",
+      "risk_type": "과도한 중도해지 배상",
+      "risk_reason": "잔여 기간 월세 전액과 중개보수까지 배상하도록 하여 임차인에게 과중한 손해배상 의무를 부과하는 불공정 조항이다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민법 제635조"
+    }
+  ],
+  "commercial_lease": [
+    {
+      "contract_type": "commercial_lease",
+      "rule_id": "commercial-toxic-001",
+      "rule_category": "권리금",
+      "pattern_text": "임차인은 계약 종료 시 신규 임차인으로부터 권리금을 수수할 수 없으며 임대인에게 권리금 회수 기회를 요구하지 않는다",
+      "risk_type": "권리금 회수 기회 배제",
+      "risk_reason": "상가건물 임대차보호법이 보장하는 권리금 회수 기회를 사전에 포기시키는 조항으로, 임차인에게 불리한 약정은 효력이 제한될 수 있다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "상가건물 임대차보호법 제10조의4"
+    },
+    {
+      "contract_type": "commercial_lease",
+      "rule_id": "commercial-toxic-002",
+      "rule_category": "계약갱신",
+      "pattern_text": "임대인은 임차인의 계약갱신요구를 정당한 사유 없이 거절할 수 있으며 임차인은 이에 이의를 제기하지 않는다",
+      "risk_type": "갱신요구권 침해",
+      "risk_reason": "상가임차인의 최대 10년 계약갱신요구권을 정당한 사유 없이 거절할 수 있게 하여 임차인의 영업 안정성을 침해한다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "상가건물 임대차보호법 제10조"
+    },
+    {
+      "contract_type": "commercial_lease",
+      "rule_id": "commercial-toxic-003",
+      "rule_category": "차임증액",
+      "pattern_text": "임대인은 매년 임의의 비율로 차임과 보증금을 인상할 수 있으며 임차인은 무조건 이에 응한다",
+      "risk_type": "차임 증액 한도 초과",
+      "risk_reason": "상가건물 임대차보호법상 차임 증액 청구 한도(5%)를 무시하고 임대인이 임의 비율로 인상하도록 하여 임차인에게 불리하다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "상가건물 임대차보호법 제11조"
+    },
+    {
+      "contract_type": "commercial_lease",
+      "rule_id": "commercial-toxic-004",
+      "rule_category": "원상복구",
+      "pattern_text": "임차인은 퇴거 시 임대인이 지정하는 상태로 시설을 전부 철거·복구하며 그 범위와 비용은 임대인이 결정한다",
+      "risk_type": "과도한 원상복구 의무",
+      "risk_reason": "원상복구 범위와 비용을 임대인이 일방적으로 결정하도록 하여 임차인이 설치하지 않은 부분까지 복구 비용을 부담할 위험이 있다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민법 제615조"
+    },
+    {
+      "contract_type": "commercial_lease",
+      "rule_id": "commercial-toxic-005",
+      "rule_category": "영업제한",
+      "pattern_text": "임대인은 임차인의 영업 종류·영업 시간을 언제든지 제한할 수 있으며 이를 이유로 한 손해는 배상하지 않는다",
+      "risk_type": "영업권 제한",
+      "risk_reason": "임대인이 임차인의 영업 종류와 시간을 일방적으로 제한하면서 손해배상도 배제하여 임차인의 영업권을 부당하게 침해한다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "상가건물 임대차보호법 제10조의4"
+    },
+    {
+      "contract_type": "commercial_lease",
+      "rule_id": "commercial-toxic-006",
+      "rule_category": "제소전화해",
+      "pattern_text": "임차인은 계약과 동시에 임대인이 요구하는 내용의 제소전화해조서 작성에 무조건 협력한다",
+      "risk_type": "제소전화해 강요",
+      "risk_reason": "내용을 검토할 기회 없이 임대인이 요구하는 제소전화해에 무조건 협력하도록 하여 임차인이 명도 등에서 방어권을 상실할 위험이 있다",
+      "is_required_clause": false,
+      "applicable_perspective": "tenant",
+      "legal_basis": "민사소송법 제385조"
+    }
+  ]
+}
