@@ -31,3 +31,6 @@ coverage/
 *.js.map
 !jest.config.ts
 !src/**/*.ts
+
+# 프론트엔드 정적 스크립트는 소스이므로 포함 (컴파일 산출물 아님)
+!public/app.js
