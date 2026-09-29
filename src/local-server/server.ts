@@ -988,7 +988,7 @@ app.post('/api/questions', async (req, res) => {
   }
 
   // 계약서 서비스는 OCR로 추출한 계약서 원문(장문)을 함께 보낼 수 있으므로 상한을 완화한다.
-  const maxQueryLength = serviceType === 'contract' ? 50000 : 1000;
+  const maxQueryLength = serviceType === 'contract' ? 200000 : 1000;
   if (query.length < 10 || query.length > maxQueryLength) {
     res.status(400).json({ error: `질문은 10자 이상 ${maxQueryLength.toLocaleString()}자 이하로 입력해주세요.` });
     return;

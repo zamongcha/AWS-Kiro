@@ -260,20 +260,23 @@ function autoResize() {
 
 function updateCharCount() {
   var len = queryInput.value.length;
-  // 계약서 서비스는 OCR 원문(장문) 입력을 허용하므로 상한을 완화한다.
-  var maxLen = currentService === 'contract' ? 50000 : 1000;
+  // 계약서 서비스는 OCR 원문(장문) 입력을 허용하므로 상한을 크게 둔다.
+  var maxLen = currentService === 'contract' ? 200000 : 1000;
   charCount.textContent = len + '/' + maxLen;
-  if (len >= 10 && len <= maxLen) {
-    charCount.classList.remove('text-red-400');
-    charCount.classList.add('text-gray-400');
+  if (len >= 10) {
+    // 10자 이상이면 전송 가능. 상한 초과 시 표시만 경고색.
+    if (len > maxLen) {
+      charCount.classList.remove('text-gray-400');
+      charCount.classList.add('text-red-400');
+    } else {
+      charCount.classList.remove('text-red-400');
+      charCount.classList.add('text-gray-400');
+    }
     sendBtn.disabled = false;
-  } else if (len > 0 && len < 10) {
-    charCount.classList.remove('text-gray-400');
-    charCount.classList.add('text-red-400');
-    sendBtn.disabled = true;
   } else {
-    charCount.classList.add('text-gray-400');
-    charCount.classList.remove('text-red-400');
+    // 10자 미만(빈 값 포함)은 전송 불가
+    charCount.classList.remove('text-gray-400');
+    charCount.classList.add(len > 0 ? 'text-red-400' : 'text-gray-400');
     sendBtn.disabled = true;
   }
 }
