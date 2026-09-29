@@ -601,7 +601,7 @@ async function uploadContractFile() {
   var mimeType = file.type;
   if (mimeType === 'image/jpg') mimeType = 'image/jpeg';
   if (OCR_ALLOWED_MIME.indexOf(mimeType) === -1) {
-    setContractStatus('이미지(JPG/PNG) 또는 PDF만 업로드할 수 있습니다.', 'error');
+    setContractStatus('이미지(JPG/PNG) 또는 PDF만 업로드할 수 있습니다. 아이폰 HEIC 사진은 JPG로 변환 후 올려주세요.', 'error');
     return;
   }
   if (file.size > OCR_MAX_BYTES) {
@@ -641,13 +641,11 @@ async function uploadContractFile() {
 
     var extracted = (data.text || '').trim();
     if (!extracted) {
-      setContractStatus('추출된 텍스트가 없습니다. 더 선명한 파일을 사용해 주세요.', 'error');
+      setContractStatus('추출된 텍스트가 없습니다. 더 선명한 사진이나 다른 파일을 사용해 주세요. (지원: JPG/PNG/PDF, 최대 20MB)', 'error');
       return;
     }
 
     // 추출 텍스트를 입력창에 채워넣고 분석 요청 문구를 덧붙인다.
-    // maxlength(1000)에 걸리지 않도록 요청 문구 + 계약서 원문을 합쳐 넣되,
-    // 길이 초과 시 maxlength 속성을 완화해 전체 텍스트를 보존한다.
     var prompt = '다음 계약서를 분석해줘.\n\n[계약서 원문]\n' + extracted;
     if (prompt.length > 1000) {
       queryInput.setAttribute('maxlength', String(prompt.length + 100));
@@ -655,11 +653,17 @@ async function uploadContractFile() {
     queryInput.value = prompt;
     autoResize();
     updateCharCount();
-    queryInput.focus();
 
-    setContractStatus('추출 완료! 입력창에서 내용을 확인·수정한 뒤 전송하세요.', 'success');
+    setContractStatus('추출 완료! 위험 조항을 분석하고 있습니다...', 'success');
+
+    // 자동으로 분석까지 실행한다. (사용자는 입력창 내용을 수정해 다시 전송할 수도 있다)
+    if (!sendBtn.disabled && !isLoading && typeof sendMessage === 'function') {
+      sendMessage();
+    } else {
+      setContractStatus('추출 완료! 입력창에서 내용을 확인·수정한 뒤 전송 버튼을 눌러 분석하세요.', 'success');
+    }
   } catch (error) {
-    setContractStatus(error && error.message ? error.message : '업로드 중 오류가 발생했습니다.', 'error');
+    setContractStatus(error && error.message ? error.message : '업로드 중 오류가 발생했습니다. 파일 형식(JPG/PNG/PDF)과 크기(최대 20MB)를 확인해 주세요.', 'error');
   } finally {
     contractUploadBtn.disabled = false;
     contractUploadBtn.textContent = '텍스트 추출';
